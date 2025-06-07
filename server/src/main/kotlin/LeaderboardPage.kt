@@ -9,7 +9,7 @@ import kotlin.random.Random
 fun HTML.leaderboardPage(random: Random) {
     head {
         title("HTMX Example")
-        script(src = "/web.js") {}
+        script(src = "web.js") {}
         link(rel = "stylesheet", href = "/leaderboard.css")
     }
     body {

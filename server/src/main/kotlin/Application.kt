@@ -12,6 +12,7 @@ fun Application.module() {
     val userRepository = UserRepository()
 
     registerUserRoutes(userRepository)
+
 }
 
 // moved exampled outside of module function just for cleanup. Put back if you want to test something

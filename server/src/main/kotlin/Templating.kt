@@ -3,6 +3,7 @@ package com.playground
 import io.ktor.http.*
 import io.ktor.server.application.*
 import io.ktor.server.html.*
+import io.ktor.server.http.content.staticResources
 import io.ktor.server.response.*
 import io.ktor.server.routing.*
 import kotlinx.css.*
@@ -11,6 +12,9 @@ import kotlin.random.Random
 
 fun Application.configureTemplating() {
     routing {
+
+        staticResources("/", "/web")
+
         val random = Random(System.currentTimeMillis())
 
         get("/") {
