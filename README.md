@@ -2,7 +2,7 @@
 
 A good starting tutorial: https://www.youtube.com/watch?v=tstB08EDClw&t=65s
 
-auto-reaload : ./gradlew -t build then run the application normally
+auto-reaload : ./gradlew -t build -x test -i then run the application normally
 
 
 This project was created using the [Ktor Project Generator](https://start.ktor.io).

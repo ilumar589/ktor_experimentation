@@ -12,6 +12,10 @@ import kotlinx.html.label
 fun FlowContent.insertUserForm() {
     div {
         form {
+            attributes["hx-post"] = "/users"
+            attributes["hx-target"] = "#users-table"
+            attributes["hx-swap"] = "beforeend"
+
             div {
                 div {
                     label {

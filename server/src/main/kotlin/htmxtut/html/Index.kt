@@ -1,6 +1,7 @@
 package com.playground.htmxtut.html
 
 import com.playground.htmxtut.repository.UserRepository
+import kotlinx.html.BODY
 import kotlinx.html.FlowContent
 import kotlinx.html.HTML
 import kotlinx.html.body
@@ -16,10 +17,16 @@ fun HTML.renderIndex(userRepository: UserRepository) {
         insertHeader()
         insertUserForm()
         insertUserTable(users = userRepository.findAll())
+
+        insertErrorHandlingScripts()
     }
 }
 
 // interface for all classes representing html tags
 private fun FlowContent.insertHeader() {
     h5 { + "Users List" }
+}
+
+private fun BODY.insertErrorHandlingScripts() {
+    //TODO in web component because in the tutorial he is writing a dom manipulation script in a string
 }

@@ -70,6 +70,12 @@ fun TR.insertUserRowCells(user: User) {
     }
 
     td {
-        button { + "Delete" }
+        button {
+            attributes["hx-delete"] = "/users/${user.id}"
+            attributes["hx-swap"] = "outerHtml"
+            attributes["hx-target"] = "closest tr"
+
+            + "Delete"
+        }
     }
 }
