@@ -18,6 +18,7 @@ import kotlinx.html.tr
 fun Application.registerUserRoutes(userRepository: UserRepository) {
     routing {
         staticResources("/", "/web")
+        staticResources("/img", "/img")
 
         get("/") {
             call.respondHtml {

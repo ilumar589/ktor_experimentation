@@ -6,6 +6,7 @@ import kotlinx.html.TR
 import kotlinx.html.button
 import kotlinx.html.div
 import kotlinx.html.id
+import kotlinx.html.img
 import kotlinx.html.p
 import kotlinx.html.span
 import kotlinx.html.table
@@ -42,6 +43,14 @@ fun FlowContent.insertUserTable(users: List<User>) {
 }
 
 fun TR.insertUserRowCells(user: User) {
+    td {
+        div {
+            img {
+                src = "/img/user_placeholder.png"
+            }
+        }
+    }
+
     td {
         div {
             p {

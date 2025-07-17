@@ -1,3 +1,5 @@
+import org.jetbrains.kotlin.gradle.dsl.JvmTarget
+
 plugins {
     alias(libs.plugins.kotlin.jvm)
     alias(libs.plugins.ktor)
@@ -5,18 +7,18 @@ plugins {
 }
 
 kotlin {
-    jvmToolchain(23)
+    jvmToolchain(24)
 }
 
 tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile>().configureEach {
-    kotlinOptions {
-        jvmTarget = "23"
+    compilerOptions {
+        jvmTarget.set(JvmTarget.JVM_24)
     }
 }
 
 java {
     toolchain {
-        languageVersion.set(JavaLanguageVersion.of(23))
+        languageVersion.set(JavaLanguageVersion.of(24))
     }
 }
 

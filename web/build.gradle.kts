@@ -18,6 +18,7 @@ kotlin {
         val wasmJsMain by getting {
             dependencies {
                 implementation(npm("htmx.org", "2.0.4"))
+                implementation(npm("tailwindcss", "4.1.8"))
                 implementation(libs.kotlinx.browser)
             }
         }
